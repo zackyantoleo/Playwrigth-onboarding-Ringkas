@@ -1,0 +1,42 @@
+// import { test, expect } from "@playwright/test";
+// import KPR from "../pages/calculator";
+
+// test("Conventional Calculator", async ({page, baseURL}) => {
+//     const KPRv = new KPR(page);
+//     await page.goto(`${baseURL}`);
+    
+//     await KPRv.fillKPRType('conventional');
+//     await page.locator('//*[@id="calculator-app"]/div[1]/form/div[2]/div[1]/select').selectOption('10') // Tenor
+//     await page.locator('//*[@id="interest_rate"]').fill('4') // Interenst Rate
+//     await page.locator('//*[@id="net_salary"]').fill('10000000')   // Salary
+//     await page.locator('//*[@id="ongoing_installment"]').fill('0') // Ongoing Installment
+//     await page.locator('//*[@id="calculator-app"]/div[1]/form/div[2]/div[5]/button').click() // Calculate button
+
+//     await expect(page.locator('//*[@id="calculator-app"]/div[2]/div[1]/div[2]/p[2]')).toHaveText('Rp 543.235.962') // Result
+
+//     await page.close();
+// }); 
+
+// import { test, expect } from "@playwright/test";
+// import calculatorpage from "../pages/calculator";
+
+// test("Syariah Calculator", async ({page}) => {
+//     const calculator = new calculatorpage(page);
+    
+//     await page.goto('https://ringkas.co.id/');
+    
+//     await page.waitForTimeout(5000);
+
+//     await calculator.fillKPRType('syariah'); //'conventional' or 'syariah'
+//     await calculator.fillTenor('10') 
+//     await calculator.fillMargin('4')
+//     await calculator.fillSalary('10000000') 
+//     await calculator.fillOngoingInstallment('0') 
+//     await calculator.clickCalculateButton()
+
+//     await page.waitForTimeout(2000);
+
+//     await expect(page.locator('.final-result')).toHaveText('Rp 471.428.571') // Result
+
+//     await page.close();
+// }); 
